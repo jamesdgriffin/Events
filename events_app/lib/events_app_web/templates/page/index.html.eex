@@ -1,5 +1,20 @@
 <div class="row">
   <div class="col">
-    <p>TODO: Build the app!!</p>
+    <h1>Event Feed!</h1>
   </div>
+</div>
+
+<div class="row">
+  <%= for event <- @events do %>
+    <div class="col-sm-4 card">
+      <div class="card-body">
+        <p class="card-text"><%= event.name %>
+        <p class="card-text"><%= event.date %>
+        <p class="card-text"><%= event.desc %>
+        <%= link("view",
+                 to: Routes.event_path(@conn, :show, event)
+                ) %>
+      </div>
+    </div>
+  <% end %>
 </div>

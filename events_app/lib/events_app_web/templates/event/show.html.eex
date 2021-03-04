@@ -1,5 +1,8 @@
 <h1>Show Event</h1>
 
+<span><%= link "Edit", to: Routes.event_path(@conn, :edit, @event) %></span>
+<span><%= link "Back", to: Routes.event_path(@conn, :index) %></span>
+
 <ul>
 
   <li>
@@ -18,6 +21,3 @@
   </li>
 
 </ul>
-
-<span><%= link "Edit", to: Routes.event_path(@conn, :edit, @event) %></span>
-<span><%= link "Back", to: Routes.event_path(@conn, :index) %></span>
