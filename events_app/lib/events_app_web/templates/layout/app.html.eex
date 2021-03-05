@@ -29,7 +29,7 @@
                   Routes.session_path(@conn, :create),
                   [class: "form-inline"],
                   fn f -> %>
-              <%= text_input f, :name, class: "form-control" %>
+              <%= text_input f, :email, class: "form-control", placeholder: "example@email.com" %>
               <%= submit "Login", class: "btn btn-secondary" %>
             <% end %>
           </div>
