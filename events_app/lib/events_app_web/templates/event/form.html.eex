@@ -17,6 +17,11 @@
     <%= label f, :desc %>
     <%= textarea f, :desc, class: "form-control" %>
     <%= error_tag f, :desc %>
+
+    <%= label f, :inv %>
+    <%= textarea f, :inv, class: "form-control",
+        placeholder: "seperate emails with comma and space" %>
+    <%= error_tag f, :inv %>
   </div>
 
   <div>

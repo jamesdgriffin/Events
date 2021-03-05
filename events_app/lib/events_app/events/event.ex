@@ -6,6 +6,7 @@ defmodule EventsApp.Events.Event do
     field :date, :string
     field :desc, :string
     field :name, :string
+    field :inv, :string
 
     timestamps()
   end
@@ -13,7 +14,7 @@ defmodule EventsApp.Events.Event do
   @doc false
   def changeset(event, attrs) do
     event
-    |> cast(attrs, [:name, :date, :desc])
-    |> validate_required([:name, :date, :desc])
+    |> cast(attrs, [:name, :date, :desc, :inv])
+    |> validate_required([:name, :date, :desc, :inv])
   end
 end
