@@ -20,4 +20,13 @@
     <%= @event.desc %>
   </li>
 
+  <li>
+    <strong>Invited:</strong>
+    <%= @event.inv %>
+  </li>
+
 </ul>
+
+<div>
+  <p>Invite Link: http://events.jimbot.io/events/<%= @event.id %></p>
+</div>
