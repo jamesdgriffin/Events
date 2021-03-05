@@ -25,7 +25,7 @@ My app is properly deployed.
 
 6. If you would like the deployment for an old homework to be reconsidered, what
 are the links to your Inkfish submission and deployed site?
-
+None.
 
 
 And here's a list of tasks for grading comments. Just leave this here:

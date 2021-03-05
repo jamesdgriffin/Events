@@ -6,7 +6,6 @@ export PORT=4793
 export SECRET_KEY_BASE=insecure
 export DATABASE_URL=ecto://events:bad@localhost/events_app_prod
 
-
 mix deps.get --only prod
 mix compile
 
@@ -29,6 +28,8 @@ export SECRET_KEY_BASE
 
 DB_PASS=$(cat "$CFGD/db_pass")
 export DATABASE_URL=ecto://events:$DB_PASS@localhost/events_app_prod
+
+mix ecto.migrate
 
 npm install --prefix ./assets
 npm run deploy --prefix ./assets
