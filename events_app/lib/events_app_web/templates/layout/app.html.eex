@@ -24,15 +24,15 @@
             to: Routes.session_path(@conn, :delete),
             method: :delete) %>
         <% else %>
-          <div class="col">
+        <div class="col">
             <%= form_for @conn,
                   Routes.session_path(@conn, :create),
                   [class: "form-inline"],
                   fn f -> %>
-              <%= text_input f, :email, class: "form-control", placeholder: "example@email.com" %>
-              <%= submit "Login", class: "btn btn-secondary" %>
-            <% end %>
-          </div>
+                <%= text_input f, :email, class: "form-control", placeholder: "example@email.com" %>
+            <%= submit "Login", class: "btn btn-secondary" %>
+          <% end %>
+        </div>
           <div class="col">
             <%= link "Register", to: Routes.user_path(@conn, :new) %>
           </div>

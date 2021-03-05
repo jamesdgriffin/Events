@@ -16,11 +16,11 @@ events.jimbot.io
 
 
 4. Is your app functionality complete? If not, what's missing?
-
+Yes, everything for this assignment is complete.
 
 
 5. Is your app properly deployed? If not, what went wrong?
-
+My app is properly deployed.
 
 
 6. If you would like the deployment for an old homework to be reconsidered, what
