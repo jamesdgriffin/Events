@@ -28,5 +28,6 @@
 </ul>
 
 <div>
-  <p>Invite Link: http://events.jimbot.io/events/<%= @event.id %></p>
+  <strong>Invite Link:</strong>
+  <p>http://events.jimbot.io/events/<%= @event.id %></p>
 </div>
