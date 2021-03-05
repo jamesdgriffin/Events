@@ -5,6 +5,12 @@
 </div>
 
 <div class="row">
+  <div class="col-sm-4 card">
+    <div class="card-body">
+      <%= link("new event",
+               to: Routes.event_path(@conn, :new)) %>
+    </div>
+  </div>
   <%= for event <- @events do %>
     <div class="col-sm-4 card">
       <div class="card-body">
@@ -12,8 +18,7 @@
         <p class="card-text"><%= event.date %>
         <p class="card-text"><%= event.desc %>
         <%= link("view",
-                 to: Routes.event_path(@conn, :show, event)
-                ) %>
+                 to: Routes.event_path(@conn, :show, event)) %>
       </div>
     </div>
   <% end %>

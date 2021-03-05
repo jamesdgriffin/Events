@@ -7,18 +7,18 @@
 
   <div class="form-group">
     <%= label f, :name %>
-    <%= textarea f, :name, class: "form-control" %>
+    <%= text_input f, :name, class: "form-control" %>
     <%= error_tag f, :name %>
 
     <%= label f, :date %>
-    <%= textarea f, :date, class: "form-control" %>
+    <%= text_input f, :date, class: "form-control", type: "date" %>
     <%= error_tag f, :date %>
 
     <%= label f, :desc %>
     <%= textarea f, :desc, class: "form-control" %>
     <%= error_tag f, :desc %>
   </div>
-  
+
   <div>
     <%= submit "Save", class: "btn btn-primary" %>
   </div>
