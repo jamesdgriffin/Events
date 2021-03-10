@@ -3,6 +3,7 @@
 <table class="table table-striped">
   <thead>
     <tr>
+      <th>Posted By</th>
       <th>Name</th>
       <th>Date</th>
       <th>Desc</th>
@@ -14,6 +15,7 @@
   <tbody>
 <%= for event <- @events do %>
     <tr>
+      <td><%= event.user.name %></td>
       <td><%= event.name %></td>
       <td><%= event.date %></td>
       <td><%= event.desc %></td>

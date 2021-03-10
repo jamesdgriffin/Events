@@ -7,6 +7,7 @@ defmodule EventsApp.Events.Event do
     field :desc, :string
     field :name, :string
     field :inv, :string
+    belongs_to :user, EventsApp.Users.User
 
     timestamps()
   end
@@ -14,7 +15,7 @@ defmodule EventsApp.Events.Event do
   @doc false
   def changeset(event, attrs) do
     event
-    |> cast(attrs, [:name, :date, :desc, :inv])
-    |> validate_required([:name, :date, :desc, :inv])
+    |> cast(attrs, [:name, :date, :desc, :inv, :user_id])
+    |> validate_required([:name, :date, :desc, :inv, :user_id])
   end
 end
