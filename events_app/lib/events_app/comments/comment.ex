@@ -5,7 +5,6 @@ defmodule EventsApp.Comments.Comment do
   schema "comments" do
     field :body, :string
     field :resp, :integer
-
     belongs_to :event, EventsApp.Events.Event
     belongs_to :user, EventsApp.Users.User
 

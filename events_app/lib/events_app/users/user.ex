@@ -6,6 +6,7 @@ defmodule EventsApp.Users.User do
     field :email, :string
     field :name, :string
     has_many :events, EventsApp.Events.Event
+    has_many :comments, EventsApp.Comments.Comment
 
     timestamps()
   end
