@@ -4,6 +4,8 @@ defmodule EventsAppWeb.EventController do
   alias EventsApp.Events
   alias EventsApp.Events.Event
 
+  alias EventsApp.Comments
+
   alias EventsAppWeb.Plugs
   plug Plugs.RequireUser when action in [:new, :edit, :create, :update]
 
@@ -32,7 +34,13 @@ defmodule EventsAppWeb.EventController do
 
   def show(conn, %{"id" => _id}) do
     event = conn.assigns[:event]
-    render(conn, "show.html", event: event)
+    comm = %Comments.Comment{
+      event_id: event.id,
+      user_id: current_user_id(conn),
+      resp: 0,
+    }
+    new_comment = Comments.change_comment(comm)
+    render(conn, "show.html", event: event, new_comment: new_comment)
   end
 
   def edit(conn, %{"id" => _id}) do

@@ -33,3 +33,14 @@
   <strong>Invite Link:</strong>
   <p>http://events.jimbot.io/events/<%= @event.id %></p>
 </div>
+
+<h2>Add Comment</h2>
+
+<%= if have_current_user?(@conn) do %>
+  <%= render(
+    EventsAppWeb.CommentView,
+    "form.html",
+    changeset: @new_comment,
+    action: Routes.comment_path(@conn, :create)
+  ) %>
+<% end %>
