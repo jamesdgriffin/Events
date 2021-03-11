@@ -7,20 +7,12 @@
 <div class="row">
   <div class="col-sm-4 card">
     <div class="card-body">
-      <p><%= link("new event",
-               to: Routes.event_path(@conn, :new)) %></p>
-      <p><%= link "events list", to: "/events" %></p>
+      <%= if have_current_user?(@conn) do %>
+        <p><%= link("new event", to: Routes.event_path(@conn, :new)) %></p>
+        <p><%= link "events list", to: "/events" %></p>
+      <% else %>
+        <p>Login first!</p>
+      <% end %>
     </div>
   </div>
-  <%= for event <- @events do %>
-    <div class="col-sm-4 card">
-      <div class="card-body">
-        <p class="card-text"><%= event.name %>
-        <p class="card-text"><%= event.date %>
-        <p class="card-text"><%= event.desc %>
-        <%= link("view",
-                 to: Routes.event_path(@conn, :show, event)) %>
-      </div>
-    </div>
-  <% end %>
 </div>
