@@ -6,7 +6,7 @@ use Mix.Config
 # to provide built-in test partitioning in CI environment.
 # Run `mix help test` for more information.
 config :events_app, EventsApp.Repo,
-  username: "events",
+  username: "eventsapp",
   password: "S6ZMQGq3piC6Dc",
   database: "events_app_test#{System.get_env("MIX_TEST_PARTITION")}",
   hostname: "localhost",
