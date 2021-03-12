@@ -53,6 +53,9 @@
       <p>Posted by: <%= comm.user.name %></p>
       <p class="card-text">Response: <%= comm.resp %></p>
       <p class="card-text">Comment: <%= comm.body %></p>
+      <%= link "Change", to: Routes.comment_path(@conn, :edit, comm) %></span>
+      <%= link "Delete", to: Routes.comment_path(@conn,
+                :delete, comm), method: :delete, data: [confirm: "Are you sure?"] %>
     </div>
   </div>
 <% end %>
