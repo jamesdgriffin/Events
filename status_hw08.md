@@ -8,7 +8,7 @@ James Griffin
 
 
 2. What's the URL of the github repo with your work for this HW?
-
+https://github.com/yono-oko/Events
 
 
 3. What's the URL that you deployed to?
@@ -21,7 +21,6 @@ No. It does not have profile pictures, and some access control does not work. Ex
 
 5. Is your app properly deployed? If not, what went wrong?
 Yes - although it took me about 8 hours due to trouble with postgresql.
-
 
 
 
