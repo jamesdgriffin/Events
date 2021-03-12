@@ -37,7 +37,6 @@ defmodule EventsAppWeb.EventController do
     comm = %Comments.Comment{
       event_id: event.id,
       user_id: current_user_id(conn),
-      resp: 0,
     }
     new_comment = Comments.change_comment(comm)
     render(conn, "show.html", event: event, new_comment: new_comment)

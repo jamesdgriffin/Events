@@ -50,8 +50,9 @@
 <%= for comm <- @event.comments do %>
   <div class="card">
     <div class="card-body">
-      <p>Posted by <%= comm.user.name %></p>
-      <p class="card-text"><%= comm.body %></p>
+      <p>Posted by: <%= comm.user.name %></p>
+      <p class="card-text">Response: <%= comm.resp %></p>
+      <p class="card-text">Comment: <%= comm.body %></p>
     </div>
   </div>
 <% end %>

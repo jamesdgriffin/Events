@@ -14,7 +14,7 @@
     <%= error_tag f, :body %>
 
     <%= label f, :resp %>
-    <%= textarea f, :resp, class: "form-control" %>
+    <%= select f, :resp, Yes: "Yes", No: "No" %>
     <%= error_tag f, :resp %>
   <div>
 
