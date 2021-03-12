@@ -1,4 +1,4 @@
-Web Dev Spring 2021 HW07 Status
+Web Dev Spring 2021 HW08 Status
 
 Answer the following questions:
 
@@ -8,7 +8,7 @@ James Griffin
 
 
 2. What's the URL of the github repo with your work for this HW?
-https://github.com/yono-oko/Events
+
 
 
 3. What's the URL that you deployed to?
@@ -16,16 +16,13 @@ events.jimbot.io
 
 
 4. Is your app functionality complete? If not, what's missing?
-Yes, everything for this assignment is complete.
+No. It does not have profile pictures, and some access control does not work. Example - anyone can view any event.
 
 
 5. Is your app properly deployed? If not, what went wrong?
-My app is properly deployed.
+Yes - although it took me about 8 hours due to trouble with postgresql.
 
 
-6. If you would like the deployment for an old homework to be reconsidered, what
-are the links to your Inkfish submission and deployed site?
-None.
 
 
 And here's a list of tasks for grading comments. Just leave this here:
